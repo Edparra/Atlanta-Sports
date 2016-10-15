@@ -1,0 +1,11 @@
+<h2>Atlanta <%= @team.team_name %> <%= @team.sport %> Team</h2>
+
+<ul style="list-style-type: none;">
+	<% @team.players.each do |player| %>
+		<li>
+			<img class="profile" src="<%= player.pic_url %>"> <a href="/players/<%= player.id %>"><%= player.name %></a>
+		</li>
+	<% end %>
+</ul>
+
+<a href="/players/add/<%= @team.id %>">Add Player</a> <a href="/teams/edit/<%= @team.id %>">Edit Team</a> <a href="/teams/delete/<%= @team.id %>" class="delete" data-item="the <%= @team.team_name %>">Delete Team</a>

@@ -1,0 +1,20 @@
+<h1><%= @player.name %></h1>
+
+<img src="<%= @player.pic_url %>" class="profile">
+
+<table>
+	<tr>
+		<th>Plays For</th>
+		<td><a href="/teams/<%= @player.team.id %>"><%= @player.team.team_name %></a></td>
+	</tr>
+	<tr>
+		<th>Age</th>
+		<td><%= @player.age %></td>
+	</tr>
+	<tr>
+		<th>Position</th>
+		<td><%= @player.position %></td>
+	</tr>
+</table>
+
+<a href="/players/edit/<%= @player.id %>">Edit Player</a> <a href="/players/delete/<%= @player.id %>" class="delete" data-item="<%= @player.name %>">Delete Player</a>

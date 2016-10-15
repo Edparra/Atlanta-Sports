@@ -1,0 +1,29 @@
+<h1>All Players</h1>
+
+<%
+last_team = 0
+@players.each do |player|
+	if player.team.id != last_team
+		if last_team != 0
+			%>
+			</ul>
+			<%
+		end
+		last_team = player.team.id
+		%>
+			<h2><a href="/teams/<%= player.team.id %>">Atlanta <%= player.team.team_name + ' ' + player.team.sport %> Team</a></h2>
+			<ul class='allplayers'>
+		<%
+	end
+	%>
+	<div class='dudes'>
+		<li class="dude">
+			<img class="profile" src="<%= player.pic_url %>"> <br><a href="/players/<%= player.id %>"><%= player.name %></a>
+		</li>
+		</div>
+	<%
+end
+%>
+</ul>
+
+<a href="/players/add">Add Player</a>

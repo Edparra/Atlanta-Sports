@@ -1,0 +1,12 @@
+<h1>Add Player to Atlanta <%= @team.team_name %></h1>
+
+<form action="/players/add" method="post">
+	<label>Name: <input type="text" name="name"></label><br>
+	<label>Age: <input type="number" name="age"></label><br>
+	<label>Position: <input type="text" name="position"></label><br>
+	<label>Picture: <input type="url" name="pic_url"></label><br>
+	<img class="profile" id="preview" src=""><br>
+	<input type="hidden" name="team_id" value="<%= @team.id %>">
+	<input type="hidden" name="redirect" value="/teams/<%= @team.id %>">
+	<input type="submit" value="Add Player">
+</form>

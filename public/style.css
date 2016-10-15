@@ -1,0 +1,65 @@
+  body{
+    background-image: url('http://hqpictures.net/wp-content/uploads/2015/07/Atlanta-Wallpaper-HD.jpg');
+  }
+  ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  /*  border: 1px solid #e7e7e7;*/
+    background-color: black;
+}
+h2, h1{
+  text-align: center
+}
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.group {
+ display: inline-block;
+ margin-left:20%;
+}
+
+.nav li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+  .logo {
+        width: 200px;
+        height: auto;
+        margin:30px;
+        background-color: white;
+      }
+
+ .profile {
+  width: 100px;
+ height: auto;
+ }
+ .allplayers{
+  text-align: center;
+ }
+ .dudes{
+  display: inline-block;
+   }
+
+
+ .delete {
+  color: red;
+ }
+
+ ul, li {
+   list-style-type: none;
+      }
+

@@ -1,0 +1,18 @@
+<h1>Edit <%= @player.name %></h1>
+
+<form action="/players/edit" method="post">
+	<label>Team:
+		<select name="team_id">
+			<% @teams.each do |team| %>
+				<option value="<%= team.id %>" <%= team.id == @player.team_id ? 'selected': '' %>><%= team.team_name %></option>
+			<% end %>
+		</select>
+	</label><br>
+	<label>Name: <input type="text" name="name" value="<%= @player.name %>"></label><br>
+	<label>Age: <input type="number" name="age" value="<%= @player.age %>"></label><br>
+	<label>Position: <input type="text" name="position" value="<%= @player.position %>"></label><br>
+	<label>Picture: <input type="url" name="pic_url" value="<%= @player.pic_url %>"></label><br>
+	<img class="profile" id="preview" src="<%= @player.pic_url %>"><br>
+	<input type="hidden" name="id" value="<%= @player.id %>">
+	<input type="submit" value="Submit Changes">
+</form>
