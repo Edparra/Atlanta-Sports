@@ -1,11 +1,14 @@
+	<div style="margin: 0 auto; width: 130px">
 <h1><%= @player.name %></h1>
 
 <img src="<%= @player.pic_url %>" class="profile">
-
+<div style="margin:auto">
 <table>
 	<tr>
 		<th>Plays For</th>
-		<td><a href="/teams/<%= @player.team.id %>"><%= @player.team.team_name %></a></td>
+		<td>
+	<a href="/teams/<%= @player.team.id %>"><%= @player.team.team_name %></a>
+	</div></td>
 	</tr>
 	<tr>
 		<th>Age</th>
@@ -16,5 +19,8 @@
 		<td><%= @player.position %></td>
 	</tr>
 </table>
+</div>
 
-<a href="/players/edit/<%= @player.id %>">Edit Player</a> <a href="/players/delete/<%= @player.id %>" class="delete" data-item="<%= @player.name %>">Delete Player</a>
+<a href="/players/edit/<%= @player.id %>">Edit Player</a>
+<!-- <a href="/players/delete/<%= @player.id %>" class="delete" data-item="<%= @player.name %>">Delete Player</a>
+ -->

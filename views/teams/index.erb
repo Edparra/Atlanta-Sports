@@ -3,9 +3,17 @@
 <ul style="list-style-type: none;">
 	<% @teams.each do |team| %>
 		<li class="group">
-			<img class="logo" src="<%= team.logo_url %>"> <a href="/teams/<%= team.id %>"><%= team.team_name %></a>
+    <a style="text-decoration: none; color:white;" href="/teams/<%= team.id %>">
+			<img class="logo" src="<%= team.logo_url %>">
+      <br>
+     <div style="text-align: center; font-size:150%;">
+     <%= team.team_name %>
+
+     </div>
+    </a>
 		</li>
 	<% end %>
 </ul>
-
-<a href="/teams/add">Add Team</a>
+<div class="addbutton">
+<button><a href="/teams/add">Add Team</a></button>
+</div>
