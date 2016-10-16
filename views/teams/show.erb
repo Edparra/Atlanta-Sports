@@ -1,11 +1,23 @@
 <h2>Atlanta <%= @team.team_name %> <%= @team.sport %> Team</h2>
+<hr>
 
-<ul style="list-style-type: none;">
+<ul class="allplayers" style="list-style-type: none;">
 	<% @team.players.each do |player| %>
+  <div class="dudes">
 		<li>
-			<img class="profile" src="<%= player.pic_url %>"> <a href="/players/<%= player.id %>"><%= player.name %></a>
+			<img class="profile" src="<%= player.pic_url %>"> <br>
+       <a class='namebox' href="/players/<%= player.id %>"><%= player.name %></a>
 		</li>
+    </div>
 	<% end %>
 </ul>
+<div class="addbutton">
+<button>
+<a href="/players/add/<%= @team.id %>">Add Player</a>
+</button>
+<button> <a href="/teams/edit/<%= @team.id %>">Edit Team</a>
+</button>
 
-<a href="/players/add/<%= @team.id %>">Add Player</a> <a href="/teams/edit/<%= @team.id %>">Edit Team</a> <a href="/teams/delete/<%= @team.id %>" class="delete" data-item="the <%= @team.team_name %>">Delete Team</a>
+ </div>
+<!-- <a href="/teams/delete/<%= @team.id %>" class="delete" data-item="the <%= @team.team_name %>">Delete Team</a>
+-->

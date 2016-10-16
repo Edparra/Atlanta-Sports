@@ -49,6 +49,7 @@ li a.active {
  height: auto;
  border-style: solid;
  border-radius: 2px;
+ margin-bottom: 4px;
  }
  .teamname{
   text-decoration: none;
@@ -62,7 +63,12 @@ li a.active {
  .allplayers{
   text-align: center;
  }
-
+.namebox{
+  text-decoration: none;
+   color:white;
+    background-color: black;
+     padding: 4px;
+}
  .dudes{
   display: inline-block;
    }
