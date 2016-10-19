@@ -9,8 +9,19 @@
   /*  border: 1px solid #e7e7e7;*/
     background-color: black;
 }
+.homelogo{
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 h2, h1{
-  text-align: center
+  text-align: center;
+}
+.playersBox{
+  border-style: solid;
+width: 50%;
+margin-left: 25%;
+background-color: rgba(128, 128, 128, 0.5);
 }
 .nav li {
     float: left;
@@ -53,8 +64,8 @@ li a.active {
  }
  .teamname{
   text-decoration: none;
-  color:red;
-  background-color: black;
+  color:#AE1818;
+  /*background-color: black;*/
   padding:12px;
  }
  .addbutton{
